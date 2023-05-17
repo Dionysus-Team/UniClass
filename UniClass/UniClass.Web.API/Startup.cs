@@ -1,4 +1,6 @@
-﻿namespace UniClass.Web.API
+﻿using UniClass.Web.API.Extensions;
+
+namespace UniClass.Web.API
 {
     public class Startup
     {
@@ -12,8 +14,17 @@
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSwagger();
+        }
 
-            //TODO Criar integração do swagger e injeção de dependências na aplicação
+        public void Configure(IApplicationBuilder app)
+        {
+            app.ConfigSwagger();
+            app.UseRouting();
+            app.UseEndpoints(endpoints => 
+            { 
+                endpoints.MapControllers(); 
+            });
         }
     }
 }
