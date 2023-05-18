@@ -1,4 +1,5 @@
-﻿using UniClass.Web.API.Extensions;
+﻿using UniClass.Infra.Configuration;
+using UniClass.Web.API.Extensions;
 
 namespace UniClass.Web.API
 {
@@ -15,6 +16,8 @@ namespace UniClass.Web.API
         {
             services.AddControllers();
             services.AddSwagger();
+            services.AddUniClassDbContext(Configuration);
+            services.AddDependencies();
         }
 
         public void Configure(IApplicationBuilder app)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UniClass.Domain.Users
+namespace UniClass.Domain.Features.Users
 {
     public class Coordenation
     {
