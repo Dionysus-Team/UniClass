@@ -14,4 +14,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UniClass.Domain\UniClass.Domain.csproj" />
+    <ProjectReference Include="..\UniClass.Infra.Data\UniClass.Infra.Data.csproj" />
+    <ProjectReference Include="..\UniClass.Infra\UniClass.Infra.csproj" />
+  </ItemGroup>
+
 </Project>
